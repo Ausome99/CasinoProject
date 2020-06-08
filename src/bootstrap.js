@@ -27,12 +27,16 @@ function placeBet() {
     return Number(bet);
 }
 
+function yesOrNo() {
+    confirm("Would you like to spin?");
+    alert("The slot spins")
+}
 
 const answer = alert("Your bet is" + " " + bet + ". " + "You now have" + " " + (wallet - bet) + " " + "credits in your wallet")
     
 
 placeBet(answer);
-
+yesOrNo();
 
 // const weightedLottery = weights => {
 //     let containerArray = [];
