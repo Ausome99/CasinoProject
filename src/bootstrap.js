@@ -29,7 +29,7 @@ function placeBet() {
 
 function yesOrNo() {
     confirm("Would you like to spin?");
-    alert("The slot spins")
+    alert("The slot spins...")
 }
 
 const answer = alert("Your bet is" + " " + bet + ". " + "You now have" + " " + (wallet - bet) + " " + "credits in your wallet")
@@ -38,22 +38,31 @@ const answer = alert("Your bet is" + " " + bet + ". " + "You now have" + " " + (
 placeBet(answer);
 yesOrNo();
 
-// const weightedLottery = weights => {
-//     let containerArray = [];
+const weightedLottery = sabers => {
+    let containerArray = [];
 
-//     Object.keys(weights).forEach(key =>{
-//         for (let i = 0; i < weights[key]; i++) {
-//             containerArray.push(key);
-//         }
-//     })
+    Object.keys(sabers).forEach(key =>{
+        for (let i = 0; i < sabers[key]; i++) {
+            containerArray.push(key);
+        }
+    })
 
-//     return containerArray[(Math.random() * containerArray.length) | 0];
-// }
+    return containerArray[(Math.random() * containerArray.length) | 0];
+}
 
-// const weights = {
-//     // winning: 1,
-//     // losing: 10
-//     green: 1,
-//     yellow: 2,
-//     red: 3
-// }
+const sabers = {
+    purpleSaber: 1,
+    redSaber: 2,
+    greenSaber: 4,
+    empty: 10
+}
+
+const spinOutput = weightedLottery(sabers);
+
+function slotOutput() {
+    console.log("The slot rolls" + " " + spinOutput);
+}
+
+console.log(slotOutput());
+console.log(slotOutput());
+console.log(slotOutput());
