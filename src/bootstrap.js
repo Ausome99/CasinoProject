@@ -15,28 +15,22 @@
 const wallet = 1000;
 
 function greeting() {
-    alert("Hello, welcome to Mos Eisley Cantina! This is Star Wars Slots");
-    alert("You have" + " " + wallet + " " + "credits in your wallet");
+    console.log("Hello, welcome to Mos Eisley Cantina! This is Star Wars Slots");
+    console.log("You have" + " " + wallet + " " + "credits in your wallet");
 }
 
 greeting();
-
-const bet = prompt("What is your bet? (10, 20, 50, 100)");
+const bet = 0;
+bet.input = ("What is your bet? (10, 20, 50, 100)");
 
 function placeBet() {
     return Number(bet);
 }
 
-function yesOrNo() {
-    confirm("Would you like to spin?");
-    alert("The slot spins...")
-}
-
-const answer = alert("Your bet is" + " " + bet + ". " + "You now have" + " " + (wallet - bet) + " " + "credits in your wallet")
+const answer = console.log("Your bet is" + " " + bet + ". " + "You now have" + " " + (wallet - bet) + " " + "credits in your wallet")
     
 
 placeBet(answer);
-yesOrNo();
 
 const weightedLottery = sabers => {
     let containerArray = [];
